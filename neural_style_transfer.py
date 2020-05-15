@@ -40,8 +40,8 @@ transform = transforms.Compose([transforms.Resize(300),
                               transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))])
 
 
-content_filename = '/home/yash/Downloads/images/lana.jpg'
-style_filename = '/home/yash/Downloads/images/style1.jpg'
+content_filename = 'content.jpg'
+style_filename = 'style.jpg'
 content = Image.open(content_filename).convert("RGB")
 content = transform(content).to(device)
 print("Content shape => ", content.shape)
